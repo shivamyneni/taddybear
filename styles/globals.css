@@ -1,16 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../assets/fonts/inter-v8-latin-100.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/inter-v8-latin-100.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/inter-v8-latin-100.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../assets/fonts/inter-v8-latin-100.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/inter-v8-latin-100.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/inter-v8-latin-100.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* inter-200 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../assets/fonts/inter-v8-latin-200.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/inter-v8-latin-200.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/inter-v8-latin-200.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../assets/fonts/inter-v8-latin-200.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/inter-v8-latin-200.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/inter-v8-latin-200.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* inter-300 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/inter-v8-latin-300.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/inter-v8-latin-300.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/inter-v8-latin-300.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../assets/fonts/inter-v8-latin-300.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/inter-v8-latin-300.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/inter-v8-latin-300.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* inter-regular - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/inter-v8-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/inter-v8-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/inter-v8-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../assets/fonts/inter-v8-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/inter-v8-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/inter-v8-latin-regular.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* inter-500 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/inter-v8-latin-500.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/inter-v8-latin-500.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/inter-v8-latin-500.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../assets/fonts/inter-v8-latin-500.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/inter-v8-latin-500.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/inter-v8-latin-500.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* inter-600 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../assets/fonts/inter-v8-latin-600.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/inter-v8-latin-600.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/inter-v8-latin-600.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../assets/fonts/inter-v8-latin-600.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/inter-v8-latin-600.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/inter-v8-latin-600.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* inter-700 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/inter-v8-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/inter-v8-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/inter-v8-latin-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../assets/fonts/inter-v8-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/inter-v8-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/inter-v8-latin-700.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* inter-800 - latin */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../assets/fonts/inter-v8-latin-800.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/inter-v8-latin-800.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/inter-v8-latin-800.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../assets/fonts/inter-v8-latin-800.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/inter-v8-latin-800.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/inter-v8-latin-800.svg#Inter") format("svg"); /* Legacy iOS */
+}
+/* alfa-slab-one-regular - latin */
+@font-face {
+  font-family: "Alfa Slab One";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/alfa-slab-one-v16-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/alfa-slab-one-v16-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/alfa-slab-one-v16-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../assets/fonts/alfa-slab-one-v16-latin-regular.woff") format("woff"),
+    /* Modern Browsers */
+      url("../assets/fonts/alfa-slab-one-v16-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/alfa-slab-one-v16-latin-regular.svg#AlfaSlabOne")
+      format("svg"); /* Legacy iOS */
+}
+
+/* square-peg-regular - latin */
+@font-face {
+  font-family: "Square Peg";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/square-peg-v1-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../assets/fonts/square-peg-v1-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../assets/fonts/square-peg-v1-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../assets/fonts/square-peg-v1-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../assets/fonts/square-peg-v1-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../assets/fonts/square-peg-v1-latin-regular.svg#SquarePeg")
+      format("svg"); /* Legacy iOS */
+}
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+
+  /* -webkit-scrollbar: {
+    background: transparent;
+    width: 0px;
+  } */
+}
+
 html,
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+html::-webkit-scrollbar {
+  background: transparent; /* Chrome/Safari/Webkit */
+  width: 0px;
+  display: none;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+.Imagebackground {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(196, 154, 17, 0.73)
+    ),
+    url("/Images/ImageBackground.png");
+  background-size: cover;
 }
