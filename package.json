@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "next build &&  next export && firebase deploy -- only hosting"
+    "deploy": "next build &&  next export && firebase deploy --only hosting"
   },
   "dependencies": {
     "gsap": "^3.10.3",
