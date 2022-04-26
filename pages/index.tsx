@@ -10,6 +10,7 @@ import { RiBearSmileLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import TrxLogo from "../components/icons/TrxLogo";
 import Opensea from "../components/icons/Opensea";
+import MenuIcon from "../components/icons/MenuIcon";
 const Home: NextPage = () => {
   gsap.registerPlugin(ScrollToPlugin);
   useEffect(() => {
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
   }, []);
 
   const [scrollId, setScrollId] = useState("header");
+  const [showNavbar, setShowNavbar] = useState(false);
   useEffect(() => {
     gsap.to(window, { duration: 1, scrollTo: `.${scrollId}` });
   }, [scrollId]);
@@ -30,43 +32,78 @@ const Home: NextPage = () => {
         <meta name="description" content="Fundraising Initiative" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="fixed xs:px-[30px] sm:px-[30px] md:px-[50px] xs:py-[20px] sm:py-[20px] md:py-[10px] bg-white w-screen shadow-md flex flex-row items-center justify-between header">
-        <div className="flex flex-row items-center self-start">
-          <RiBearSmileLine
-            color="white"
-            size={50}
-            className="bg-[#ffd727] rounded-full p-[10px] "
-          />
-          <p className="text-[#ffd727] font-SquarePeg font-bold  xs:text-[20px] sm:text-[20px] md:text-[25px] ml-[10px] md:flex sm:hidden xs:hidden">
-            ThaddyBear
-          </p>
+      <div className="fixed xs:px-[30px] sm:px-[30px] md:px-[50px] xs:py-[20px] sm:py-[20px] md:py-[10px] bg-white w-screen shadow-md flex flex-row items-center justify-between header xs:flex-col sm:flex-col md:flex-row">
+        <div className="flex flex-row items-center justify-between w-full">
+          <div className="flex flex-row items-center self-start">
+            <RiBearSmileLine
+              color="white"
+              size={50}
+              className="bg-[#ffd727] rounded-full p-[10px] "
+            />
+            <p className="text-[#ffd727] font-SquarePeg font-bold  xs:text-[20px] sm:text-[20px] md:text-[25px] ml-[10px] md:flex sm:hidden xs:hidden">
+              ThaddyBear
+            </p>
+          </div>
+          <div className="w-1/2 h-full flex flex-row items-center justify-end">
+            <MenuIcon
+              onClick={() => {
+                setShowNavbar(!showNavbar);
+              }}
+            />
+            <p
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden"
+              onClick={() => setScrollId("about")}
+            >
+              About
+            </p>
+            <p
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden"
+              onClick={() => setScrollId("journey")}
+            >
+              Journey
+            </p>
+            <p
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden"
+              onClick={() => setScrollId("updates")}
+            >
+              Updates
+            </p>
+            <p
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden"
+              onClick={() => setScrollId("contactus")}
+            >
+              Contact Us
+            </p>
+          </div>
         </div>
-        <div className="w-1/2 h-full flex flex-row items-center justify-end">
-          <p
-            className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden"
-            onClick={() => setScrollId("about")}
-          >
-            About
-          </p>
-          <p
-            className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden"
-            onClick={() => setScrollId("journey")}
-          >
-            Journey
-          </p>
-          <p
-            className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden"
-            onClick={() => setScrollId("updates")}
-          >
-            Updates
-          </p>
-          <p
-            className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden"
-            onClick={() => setScrollId("contactus")}
-          >
-            Contact Us
-          </p>
-        </div>
+        {showNavbar && (
+          <div className="w-full h-fit z-50 md:hidden sm:flex xs:flex xs:flex-col sm:flex-col mt-[10px]">
+            <p
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[15px] sm:text-[15px] md:text-[15px] mb-[8px] "
+              onClick={() => setScrollId("about")}
+            >
+              About
+            </p>
+            <p
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[15px] sm:text-[15px] md:text-[15px] mb-[8px] "
+              onClick={() => setScrollId("journey")}
+            >
+              Journey
+            </p>
+            <p
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[15px] sm:text-[15px] md:text-[15px] mb-[8px] "
+              onClick={() => setScrollId("updates")}
+            >
+              Updates
+            </p>
+            <p
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[15px] sm:text-[15px] md:text-[15px]  "
+              onClick={() => setScrollId("contactus")}
+            >
+              Contact Us
+            </p>
+          </div>
+        )}
       </div>
       <div className="w-screen h-screen flex flex-col items-center justify-center  Imagebackground xs:px-[40px] sm:px-[40px] md:px-[90px] ">
         <p className="text-white font-Inter font-bold xs:text-[30px] sm:text-[30px] md:text-[50px] capitalize heading opacity-0">
