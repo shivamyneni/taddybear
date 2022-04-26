@@ -8,6 +8,8 @@ import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 import { DiGoogleDrive } from "react-icons/di";
 import { RiBearSmileLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
+import TrxLogo from "../components/icons/TrxLogo";
+import Opensea from "../components/icons/Opensea";
 const Home: NextPage = () => {
   gsap.registerPlugin(ScrollToPlugin);
   useEffect(() => {
@@ -233,54 +235,110 @@ const Home: NextPage = () => {
         </p>
         <div>
           <div className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[20px] capitalize">
-            A)Treatment
+            <p className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[10px] capitalize">
+              A)Treatment
+            </p>
+            <div>
+              <div className="flex-row flex h-fit mb-[20px]">
+                <div className="bg-[#070707] border-[#ffd000] rounded-full border-[4px] w-[20px] h-[20px]" />
+                <div>
+                  <p className="text-black font-Inter font-normal xs:text-[13px] sm:text-[13px] md:text-[15px] ml-[10px]">
+                    Completed 6 cycles of chemotherapy
+                  </p>
+                </div>
+              </div>
+              <div className="flex-row flex h-fit mb-[20px]">
+                <div className="bg-[#070707] border-[#ffd000] rounded-full border-[4px] w-[20px] h-[20px]" />
+                <div>
+                  <p className="text-black font-Inter font-normal xs:text-[13px] sm:text-[13px] md:text-[15px] ml-[10px]">
+                    Surgery to remove tumour
+                  </p>
+                </div>
+              </div>
+              <div className="flex-row flex h-fit mb-[20px]">
+                <div className="bg-white border-[#ffd000] rounded-full border-[4px] w-[20px] h-[20px]" />
+                <div>
+                  <p className="text-black font-Inter font-normal xs:text-[13px] sm:text-[13px] md:text-[15px] ml-[10px]">
+                    5 cycles of chemo + immunotherapy
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="flex flex-col">
             <p className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[10px] capitalize">
               B)Funds Raised
             </p>
-            <div className="flex flex-col px-[10px] py-[20px] rounded-[10px]  w-fit shadow-lg">
-              <p className="text-black font-Inter font-bold xs:text-[10px] sm:text-[10px] md:text-[15px] self-start mb-[10px] capitalize">
-                Thomas
-              </p>
-              <p className="text-black font-Inter font-normal xs:text-[10px] sm:text-[10px] md:text-[15px] self-start  capitalize">
-                Donated $100
-              </p>
-            </div>
+            <p className="text-[#e7c21d] font-Inter font-bold xs:text-[20px] sm:text-[20px] md:text-[40px] self-start mb-[10px] capitalize fund">
+              $2308
+            </p>
           </div>
           <div className="flex flex-col">
             <p className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start  capitalize">
               C)Expenditure
             </p>
             <div className="flex flex-row items-center">
-              <p className="text-black font-Inter font-normal xs:text-[10px] sm:text-[10px] md:text-[15px] ">
+              <p className="text-black font-Inter font-normal xs:text-[13px] sm:text-[13px] md:text-[15px] ">
                 You can check the Expenditure sheet here:
               </p>
               <a href="https://drive.google.com/drive/folders/1C26ElFmluUNtKr-4zTAiLL5B__EkYqSP">
-                <DiGoogleDrive color="black" size={35} className="mr-[20px] " />
+                <DiGoogleDrive
+                  color="black"
+                  size={"100%"}
+                  className="mr-[20px] xs:w-[25px] sm:w-[25px] md:w-[35px]"
+                />
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-screen h-auto flex flex-col bg-[#e7c21d] pt-[50px] pb-[100px]  px-[40px] contactus">
-        <p className="font-Inter text-white font-bold mb-[20px] text-[40px]">
-          Contact Us
-        </p>
-        <div className="flex flex-row">
-          <a href="https://www.facebook.com/iamthaddybear">
-            <BsFacebook color="white" size={30} className="mr-[20px]" />
-          </a>
-          <a href="https://www.instagram.com/iamthaddybear/?hl=en">
-            <BsInstagram color="white" size={30} className="mr-[20px]" />
-          </a>
-          <a href="https://twitter.com/iamthaddybear">
-            <BsTwitter color="white" size={30} className="mr-[20px]" />
-          </a>
-          <a href="https://drive.google.com/drive/folders/1n-N_FcnoRUlgws_A0p68z0BHdObsDllg?usp=sharing">
-            <DiGoogleDrive color="white" size={35} className="mr-[20px]" />
-          </a>
+      <div className="w-screen h-auto flex flex-row justify-between items-center  bg-[#e7c21d] pt-[30px] pb-[50px] xs:px-[20px] sm:px-[20px] md:px-[40px] contactus">
+        <div>
+          <p className="font-Inter text-white font-bold mb-[20px] xs:text-[25px] sm:text-[25px] md:text-[40px] ">
+            Contact Us
+          </p>
+          <div className="flex flex-row">
+            <a href="https://www.facebook.com/iamthaddybear">
+              <BsFacebook
+                color="white"
+                size={"100%"}
+                className="mr-[20px] xs:w-[20px] sm:w-[20px] md:w-[30px]"
+              />
+            </a>
+            <a href="https://www.instagram.com/iamthaddybear/?hl=en">
+              <BsInstagram
+                color="white"
+                size={"100%"}
+                className="mr-[20px] xs:w-[20px] sm:w-[20px] md:w-[30px]"
+              />
+            </a>
+            <a href="https://twitter.com/iamthaddybear">
+              <BsTwitter
+                color="white"
+                size={"100%"}
+                className="mr-[20px] xs:w-[20px] sm:w-[20px] md:w-[30px]"
+              />
+            </a>
+            <a href="https://drive.google.com/drive/folders/1n-N_FcnoRUlgws_A0p68z0BHdObsDllg?usp=sharing">
+              <DiGoogleDrive
+                color="white"
+                size={"100%"}
+                className="mr-[15px] xs:w-[25px] sm:w-[25px] md:w-[35px]"
+              />
+            </a>
+            <a href="https://opensea.io/Thaddybear">
+              <Opensea />
+            </a>
+          </div>
         </div>
+        <a href="https://trxlabs.io/">
+          <div className="flex items-center justify-center flex-col">
+            <TrxLogo />
+            <p className="font-Inter text-white xs:text-[12px] sm:text-[12px] md:text-[15px]">
+              Supported by Trx Labs
+            </p>
+          </div>
+        </a>
       </div>
     </div>
   );

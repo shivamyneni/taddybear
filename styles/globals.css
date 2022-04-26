@@ -198,6 +198,7 @@ html {
 html,
 body {
   margin: 0;
+  background-color: white;
 }
 html::-webkit-scrollbar {
   background: transparent; /* Chrome/Safari/Webkit */
