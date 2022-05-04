@@ -282,7 +282,7 @@ const Home: NextPage = () => {
               }}
             >
               <img
-                className="w-[500px] h-[300px] rounded-t-[10px]  "
+                className="xs:w-screen sm:w-screen md:w-[500px] h-[300px] rounded-t-[10px]  "
                 src={"/Images/Blog2.png"}
                 alt=""
               />
