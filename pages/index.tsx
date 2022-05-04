@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 import TrxLogo from "../components/icons/TrxLogo";
 import Opensea from "../components/icons/Opensea";
 import MenuIcon from "../components/icons/MenuIcon";
+import Link from "next/link";
+
 const Home: NextPage = () => {
   gsap.registerPlugin(ScrollToPlugin);
   useEffect(() => {
@@ -271,17 +273,23 @@ const Home: NextPage = () => {
           {`Updates`}
         </p>
         <div>
-          <a href="/Blog">
-            <div className="mb-[20px] border-[2px] border-[#e7c21d] xs:w-screen sm:w-screen md:w-[500px] h-fit overflow-hidden">
+          <Link href="/Blog">
+            <div
+              className="mb-[20px] pb-[20px]  rounded-[10px]  xs:w-screen sm:w-screen md:w-[500px] h-fit"
+              style={{
+                boxShadow:
+                  "0 19px 38px rgba(0,0,0, 0.3), 0 15px 12px rgba(0,0,0, 0.2)",
+              }}
+            >
               <img
-                className="w-[500px] h-[400px]"
+                className="w-[500px] h-[300px] rounded-t-[10px]  "
                 src={"/Images/Blog2.png"}
                 alt=""
               />
               <p className="py-[5px] font-Inter font-bold px-[10px] text-[20px]">
                 The Bomb
               </p>
-              <p className="text-[12px]  pb-[18px] w-full h-[100px]  px-[10px] overflow-hidden font-Inter mt-2 font-medium text-clip  text-black">
+              <p className="text-[12px]  w-full  px-[10px] overflow-hidden font-Inter mt-2 font-medium truncate ... text-black">
                 I brought Thaddeus to KKH A&E one October night. Singapore was
                 still in the midst of dealing with the Omicron wave. He had been
                 having fever for almost two weeks and complained that he could
@@ -317,7 +325,7 @@ const Home: NextPage = () => {
                 hour each time, I knew how claustrophobic it felt.
               </p>
             </div>
-          </a>
+          </Link>
           <div className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[20px] capitalize">
             <p className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[10px] capitalize">
               Treatment

@@ -27,7 +27,7 @@ const Blog = () => {
             color: "white",
           }}
         >
-          "The Bomb"
+          {`"The Bomb"`}
         </p>
       </div>
       <div className="w-full flex flex-col  items-center">
