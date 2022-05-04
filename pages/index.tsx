@@ -26,7 +26,7 @@ const Home: NextPage = () => {
     gsap.to(window, { duration: 1, scrollTo: `.${scrollId}` });
   }, [scrollId]);
   return (
-    <div className="w-screen h-auto">
+    <div className="w-screen h-auto overflow-hidden">
       <Head>
         <title>ThaddyBear</title>
         <meta name="description" content="Fundraising Initiative" />
@@ -271,9 +271,56 @@ const Home: NextPage = () => {
           {`Updates`}
         </p>
         <div>
+          <a href="/Blog">
+            <div className="mb-[20px] border-[2px] border-[#e7c21d] xs:w-screen sm:w-screen md:w-[500px] h-fit overflow-hidden">
+              <img
+                className="w-[500px] h-[400px]"
+                src={"/Images/Blog2.png"}
+                alt=""
+              />
+              <p className="py-[5px] font-Inter font-bold px-[10px] text-[20px]">
+                The Bomb
+              </p>
+              <p className="text-[12px]  pb-[18px] w-full h-[100px]  px-[10px] overflow-hidden font-Inter mt-2 font-medium text-clip  text-black">
+                I brought Thaddeus to KKH A&E one October night. Singapore was
+                still in the midst of dealing with the Omicron wave. He had been
+                having fever for almost two weeks and complained that he could
+                not walk. It pained me to see him like this. A fatherly A&E
+                doctor told me there seemed to be something in his chest X-Rays.
+                I thought that it was probably pneumonia since he tested ART
+                negative. Because of his fever, we were sent to an isolation
+                ward. The doctors permitted me to drive my car home and get some
+                necessities in anticipation of a long stay. I left Thaddeus if
+                their care and hurried home. When I made it back to the ward,
+                Thaddeus cried when he saw me. They had inserted an IV plug into
+                his hand to facilitate other tests and procedures. My heart was
+                torn to shreds as it was the first time he had been subjected to
+                needles since his newborn vaccinations. We were transferred to a
+                paediatric ward once he had tested negative (PCR) for covid.
+                There, the doctor informed me that he would be scheduled for an
+                MRI the next day as they “saw something in the X Ray”. After
+                awhile, I persuaded another doctor to tell me what they saw. She
+                told me that they suspected something more sinister, probably
+                Neuroblastoma. That was the first time I heard of this term and
+                it was forever seared in my brain. I did not know how to tell my
+                wife and I now prayed that my baby had Pneumonia instead.
+                Neuroblastoma was such a foreign word to me. I never knew this
+                disease existed and none of our family and friends had ever
+                heard of it. I was lost. I finally told my wife about this
+                possibility over the phone and we both broke down. The next day,
+                we did the MRI. The doctor asked if Thaddeus could keep still
+                for one and a half hours, otherwise he would have to be under
+                GA. Thaddeus asked me if GA was good for him, and I replied that
+                it was not. He said he would keep still. I had my doubts as he
+                was a mischievous child that could never follow instructions.
+                Having went through a couple of MRIs myself for less than an
+                hour each time, I knew how claustrophobic it felt.
+              </p>
+            </div>
+          </a>
           <div className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[20px] capitalize">
             <p className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[10px] capitalize">
-              A)Treatment
+              Treatment
             </p>
             <div>
               <div className="flex-row flex h-fit mb-[20px]">
@@ -304,7 +351,7 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-col">
             <p className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[10px] capitalize">
-              B)Funds Raised
+              Funds Raised
             </p>
             <p className="text-[#e7c21d] font-Inter font-bold xs:text-[20px] sm:text-[20px] md:text-[40px] self-start mb-[10px] capitalize fund">
               $2308
@@ -312,7 +359,7 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-col">
             <p className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start  capitalize">
-              C)Expenditure
+              Expenditure
             </p>
             <div className="flex flex-row items-center">
               <p className="text-black font-Inter font-normal xs:text-[13px] sm:text-[13px] md:text-[15px] ">
@@ -372,7 +419,7 @@ const Home: NextPage = () => {
           <div className="flex items-center justify-center flex-col">
             <TrxLogo />
             <p className="font-Inter text-white xs:text-[12px] sm:text-[12px] md:text-[15px]">
-              Supported by Trx Labs
+              sponsored by Trx Labs
             </p>
           </div>
         </a>
