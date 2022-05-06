@@ -1,15 +1,21 @@
 import React from "react";
-
-type content = {
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-};
+import { IoIosArrowBack } from "react-icons/io";
+import Link from "next/link";
 
 const Blog = () => {
   return (
     <div>
+      <div className="fixed xs:px-[30px] sm:px-[30px] md:px-[50px] xs:py-[20px] sm:py-[20px] md:py-[10px]  w-screen flex flex-row items-center justify-between header xs:flex-col sm:flex-col md:flex-row">
+        <div className="flex flex-row items-center self-start">
+          <Link href="/">
+            <IoIosArrowBack
+              color="white"
+              size={50}
+              className="bg-[#ffd727] rounded-full p-[10px]  shadow-lg cursor-pointer "
+            />
+          </Link>
+        </div>
+      </div>
       <div className="w-screen h-fit flex flex-row bg-top">
         <img
           className="w-full object-top object-cover h-[80vh] bg-top"
@@ -85,23 +91,22 @@ const Article = (props: any) => {
                 Having went through a couple of MRIs myself for less than an
                 hour each time, I knew how claustrophobic it felt.
                 <br />
-                <br /> [4/29, 14:48] Chandan: After the MRI, we made our way
-                back to the ward. As the door to the Diagnostic and Imaging
-                Centre opened, the oncologist and his team was already waiting
-                there for us with a concerned look on his face. My stomach
-                turned. He introduced himself, “Hi Daddy, I am not the doctor
-                anyone wants to see”. What followed was a few sessions of
-                counselling and family discussions. I also went down the rabbit
-                hole of Googling all I could about the cancer, its prognosis,
-                treatment and long term side effects. This was against the Dr’s
-                advice, as he felt that it would make communication between the
-                medical team and parents more complicated. As a parent, I could
-                not help it. I had no other ways to deal with this. This
-                diagnosis hit my wife very hard. Since then, she has doubled
-                down on her efforts to find the best treatment for Thaddeus.
-                Things happened very fast from here, as Thaddeus had to begin
-                treatment as soon as possible. Routines involving work and home
-                were quickly adjusted.
+                <br /> After the MRI, we made our way back to the ward. As the
+                door to the Diagnostic and Imaging Centre opened, the oncologist
+                and his team was already waiting there for us with a concerned
+                look on his face. My stomach turned. He introduced himself, “Hi
+                Daddy, I am not the doctor anyone wants to see”. What followed
+                was a few sessions of counselling and family discussions. I also
+                went down the rabbit hole of Googling all I could about the
+                cancer, its prognosis, treatment and long term side effects.
+                This was against the Dr’s advice, as he felt that it would make
+                communication between the medical team and parents more
+                complicated. As a parent, I could not help it. I had no other
+                ways to deal with this. This diagnosis hit my wife very hard.
+                Since then, she has doubled down on her efforts to find the best
+                treatment for Thaddeus. Things happened very fast from here, as
+                Thaddeus had to begin treatment as soon as possible. Routines
+                involving work and home were quickly adjusted.
               </p>
             </div>
             <div className="md:w-1/2 xs:w-full sm:w-full mt-2 flex-row flex-wrap flex overflow-hidden">

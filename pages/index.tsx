@@ -46,32 +46,32 @@ const Home: NextPage = () => {
               ThaddyBear
             </p>
           </div>
-          <div className="w-1/2 h-full flex flex-row items-center justify-end">
+          <div className="w-1/2 h-full flex flex-row items-center justify-end cursor-pointer">
             <MenuIcon
               onClick={() => {
                 setShowNavbar(!showNavbar);
               }}
             />
             <p
-              className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden"
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden cursor-pointer"
               onClick={() => setScrollId("about")}
             >
               About
             </p>
             <p
-              className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden"
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden cursor-pointer"
               onClick={() => setScrollId("journey")}
             >
               Journey
             </p>
             <p
-              className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden"
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden cursor-pointer"
               onClick={() => setScrollId("updates")}
             >
               Updates
             </p>
             <p
-              className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden"
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[20px] sm:text-[20px] md:text-[15px] ml-[20px] md:flex sm:hidden xs:hidden cursor-pointer"
               onClick={() => setScrollId("contactus")}
             >
               Contact Us
@@ -81,25 +81,25 @@ const Home: NextPage = () => {
         {showNavbar && (
           <div className="w-full h-fit z-50 md:hidden sm:flex xs:flex xs:flex-col sm:flex-col mt-[10px]">
             <p
-              className="text-[#ffd727] font-Inter font-bold  xs:text-[15px] sm:text-[15px] md:text-[15px] mb-[8px] "
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[15px] sm:text-[15px] md:text-[15px] mb-[8px] cursor-pointer "
               onClick={() => setScrollId("about")}
             >
               About
             </p>
             <p
-              className="text-[#ffd727] font-Inter font-bold  xs:text-[15px] sm:text-[15px] md:text-[15px] mb-[8px] "
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[15px] sm:text-[15px] md:text-[15px] mb-[8px] cursor-pointer"
               onClick={() => setScrollId("journey")}
             >
               Journey
             </p>
             <p
-              className="text-[#ffd727] font-Inter font-bold  xs:text-[15px] sm:text-[15px] md:text-[15px] mb-[8px] "
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[15px] sm:text-[15px] md:text-[15px] mb-[8px] cursor-pointer"
               onClick={() => setScrollId("updates")}
             >
               Updates
             </p>
             <p
-              className="text-[#ffd727] font-Inter font-bold  xs:text-[15px] sm:text-[15px] md:text-[15px]  "
+              className="text-[#ffd727] font-Inter font-bold  xs:text-[15px] sm:text-[15px] md:text-[15px] cursor-pointer "
               onClick={() => setScrollId("contactus")}
             >
               Contact Us
@@ -200,8 +200,6 @@ const Home: NextPage = () => {
           Children with Neuroblastoma have to go through chemotherapy, surgery,
           radiation, stem cell transplant, immunotherapy and maintenance
           treatment. The side effects are extensive and rough on the children.
-          In addition, children undergoing treatment are immune compromised and
-          fall sick very easily.
         </p>
       </div>
       <div className="w-screen xs:h-auto sm:h-auto md:h-auto flex xs:flex-col sm:flex-col md:flex-row flex-wrap overflow-hidden journey">
@@ -275,21 +273,21 @@ const Home: NextPage = () => {
         <div>
           <Link href="/Blog">
             <div
-              className="mb-[20px] pb-[20px]  rounded-[10px]  xs:w-screen sm:w-screen md:w-[500px] h-fit"
+              className="mb-[20px] pb-[20px]  rounded-[10px]  xs:w-screen sm:w-screen md:w-[200px] h-fit overflow-hidden cursor-pointer"
               style={{
                 boxShadow:
                   "0 19px 38px rgba(0,0,0, 0.3), 0 15px 12px rgba(0,0,0, 0.2)",
               }}
             >
               <img
-                className="xs:w-screen sm:w-screen md:w-[500px] h-[300px] rounded-t-[10px]  "
+                className="xs:w-screen sm:w-screen md:w-[200px] h-[200px] rounded-t-[10px]  "
                 src={"/Images/Blog2.png"}
                 alt=""
               />
               <p className="py-[5px] font-Inter font-bold px-[10px] text-[20px]">
                 The Bomb
               </p>
-              <p className="text-[12px]  w-full  px-[10px] overflow-hidden font-Inter mt-2 font-medium truncate ... text-black">
+              <p className="text-[12px]  w-full  px-[10px] font-Inter mt-2 font-medium line-clamp-5 text-black">
                 I brought Thaddeus to KKH A&E one October night. Singapore was
                 still in the midst of dealing with the Omicron wave. He had been
                 having fever for almost two weeks and complained that he could
@@ -326,7 +324,7 @@ const Home: NextPage = () => {
               </p>
             </div>
           </Link>
-          <div className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[20px] capitalize">
+          {/* <div className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[20px] capitalize">
             <p className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[10px] capitalize">
               Treatment
             </p>
@@ -356,7 +354,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="flex flex-col">
             <p className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[10px] capitalize">
               Funds Raised
