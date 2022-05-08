@@ -2,10 +2,10 @@ import * as React from "react";
 
 const TrxLogo = (props: any) => (
   <div
-    className={`xs:w-[80px] sm:w-[80px] md:w-[120px] rounded-full flex items-center justify-center aspect-square `}
+    className={`xs:w-[40px] sm:w-[40px] md:w-[60px] rounded-full flex items-center justify-center aspect-square `}
   >
     <svg
-      className="w-[50%] aspect-square "
+      className="w-[100%] aspect-square "
       viewBox="0 0 91 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

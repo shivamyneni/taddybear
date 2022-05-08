@@ -12,6 +12,7 @@ import TrxLogo from "../components/icons/TrxLogo";
 import Opensea from "../components/icons/Opensea";
 import MenuIcon from "../components/icons/MenuIcon";
 import Link from "next/link";
+import Footer from "../components/icons/Footer";
 
 const Home: NextPage = () => {
   gsap.registerPlugin(ScrollToPlugin);
@@ -38,9 +39,9 @@ const Home: NextPage = () => {
         <div className="flex flex-row items-center justify-between w-full">
           <div className="flex flex-row items-center self-start">
             <RiBearSmileLine
-              color="white"
+              color="yellow"
               size={50}
-              className="bg-[#ffd727] rounded-full p-[10px] "
+              className="bg-[#8d19b1] rounded-full p-[10px] border-[3px] border-[#FFFF00] "
             />
             <p className="text-[#ffd727] font-SquarePeg font-bold  xs:text-[20px] sm:text-[20px] md:text-[25px] ml-[10px] md:flex sm:hidden xs:hidden">
               ThaddyBear
@@ -107,7 +108,7 @@ const Home: NextPage = () => {
           </div>
         )}
       </div>
-      <div className="w-screen h-screen flex flex-col items-center justify-center  Imagebackground xs:px-[40px] sm:px-[40px] md:px-[90px] ">
+      <div className="w-screen h-screen flex flex-col items-center justify-center  Imagebackground bg-center xs:px-[40px] sm:px-[40px] md:px-[90px] ">
         <p className="text-white font-Inter font-bold xs:text-[30px] sm:text-[30px] md:text-[50px] capitalize heading opacity-0">
           {`"no act of kindness, no matter how small is ever wasted."`}
         </p>
@@ -273,14 +274,14 @@ const Home: NextPage = () => {
         <div>
           <Link href="/Blog">
             <div
-              className="mb-[20px] pb-[20px]  rounded-[10px]  xs:w-screen sm:w-screen md:w-[200px] h-fit overflow-hidden cursor-pointer"
+              className="mb-[20px] pb-[20px]  rounded-[10px]  xs:w-auto sm:w-auto md:w-[200px] h-fit overflow-hidden cursor-pointer"
               style={{
                 boxShadow:
                   "0 19px 38px rgba(0,0,0, 0.3), 0 15px 12px rgba(0,0,0, 0.2)",
               }}
             >
               <img
-                className="xs:w-screen sm:w-screen md:w-[200px] h-[200px] rounded-t-[10px]  "
+                className="xs:w-screen sm:w-screen  md:w-[200px] h-[200px] rounded-t-[10px]  "
                 src={"/Images/Blog2.png"}
                 alt=""
               />
@@ -382,54 +383,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="w-screen h-auto flex flex-row justify-between items-center  bg-[#e7c21d] pt-[30px] pb-[50px] xs:px-[20px] sm:px-[20px] md:px-[40px] contactus">
-        <div>
-          <p className="font-Inter text-white font-bold mb-[20px] xs:text-[25px] sm:text-[25px] md:text-[40px] ">
-            Contact Us
-          </p>
-          <div className="flex flex-row">
-            <a href="https://www.facebook.com/iamthaddybear">
-              <BsFacebook
-                color="white"
-                size={"100%"}
-                className="mr-[20px] xs:w-[20px] sm:w-[20px] md:w-[30px]"
-              />
-            </a>
-            <a href="https://www.instagram.com/iamthaddybear/?hl=en">
-              <BsInstagram
-                color="white"
-                size={"100%"}
-                className="mr-[20px] xs:w-[20px] sm:w-[20px] md:w-[30px]"
-              />
-            </a>
-            <a href="https://twitter.com/iamthaddybear">
-              <BsTwitter
-                color="white"
-                size={"100%"}
-                className="mr-[20px] xs:w-[20px] sm:w-[20px] md:w-[30px]"
-              />
-            </a>
-            <a href="https://drive.google.com/drive/folders/1n-N_FcnoRUlgws_A0p68z0BHdObsDllg?usp=sharing">
-              <DiGoogleDrive
-                color="white"
-                size={"100%"}
-                className="mr-[15px] xs:w-[25px] sm:w-[25px] md:w-[35px]"
-              />
-            </a>
-            <a href="https://opensea.io/Thaddybear">
-              <Opensea />
-            </a>
-          </div>
-        </div>
-        <a href="https://trxlabs.io/">
-          <div className="flex items-center justify-center flex-col">
-            <TrxLogo />
-            <p className="font-Inter text-white xs:text-[12px] sm:text-[12px] md:text-[15px]">
-              sponsored by Trx Labs
-            </p>
-          </div>
-        </a>
-      </div>
+      <Footer />
     </div>
   );
 };
