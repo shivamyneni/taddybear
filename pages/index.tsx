@@ -13,7 +13,8 @@ import Opensea from "../components/icons/Opensea";
 import MenuIcon from "../components/icons/MenuIcon";
 import Link from "next/link";
 import Footer from "../components/icons/Footer";
-
+import { db } from '@/firebaseconfig'
+import { collection, getDocs } from 'firebase/firestore'
 const Home: NextPage = () => {
   gsap.registerPlugin(ScrollToPlugin);
   useEffect(() => {
@@ -406,4 +407,22 @@ const Home: NextPage = () => {
   );
 };
 
+export async function getStaticProps() {
+  const HomeData:any = []
+  try {
+    // await the promise
+    // const querySnapshot = await getDocs(collection(db, 'ZMAX_DATA'))
+    // querySnapshot.forEach((doc) => {
+    //   HomeData.push(doc.data())
+    // })
+  } catch (error) {
+    console.log('Error Occured while fetching the Data', error)
+  }
+  return {
+    props: {
+      HomeData,
+    },
+    revalidate: 1200,
+  }
+}
 export default Home;
