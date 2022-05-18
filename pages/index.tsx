@@ -282,9 +282,12 @@ const Home: NextPage = () => {
           {`"How can you contribute to this cause?"`}
         </p>
         <p className="text-black font-Inter font-normal text-[15px]  w-4/5">
-          You can contribute by buying nfts in our collection or you can send
-          donations in Give.Asia or gogetfunding.com
+        The cost of Thaddybear’s treatment even after claiming from the insurer amount to approx. SGD $1.7 mil. The bulk of the cost is from the use of Hu3F8 (Naxitamab) in immunotherapy. This drug is commercially available in the USA and has to be imported for use in SG. The family was quoted approx. SGD $1.3 mil by the hospital. Some treatments are not covered by the insurer, such as a cancer vaccine regime lasting 5 years that is available and administered in the USA. Other treatments like Proton Therapy are only partially covered by the insurer (SGD $15k). 
+	Each year, the insurer will pay-out SGD $1 mil, with the family bearing a 10% co-payment up to SGD $30,750 per policy year. Currently, treatment stretches across two policy years. Any cost incurred beyond the payout will be fully borne by the family. By the middle of this policy year, treatment would have cost SGD $844 420, without immunotherapy.
+	The family has started fundraising. 100% of the donations will go to funding the medical bills and costs related to Thaddybear’s treatment locally and overseas. Crowdfunding platforms that the family has approached are not able to make payment to overseas institutions. Furthermore, a portion of the funds raised will be retained by these platforms as fees.   
+	Donations will be made to a joint account managed by mum and dad.
         </p>
+        <img src='/Images/paymentqr.png' className="aspect-square w-[150px] mt-[10px]"/>
       </div>
       <div className=" px-[40px] my-[50px] updates">
         <p className="text-black font-Inter font-bold xs:text-[25px] sm:text-[25px] md:text-[40px] self-start mb-[20px] capitalize">
@@ -344,37 +347,7 @@ const Home: NextPage = () => {
               </p>
             </div>
           </Link>
-          {/* <div className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[20px] capitalize">
-            <p className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[10px] capitalize">
-              Treatment
-            </p>
-            <div>
-              <div className="flex-row flex h-fit mb-[20px]">
-                <div className="bg-[#070707] border-[#ffd000] rounded-full border-[4px] w-[20px] h-[20px]" />
-                <div>
-                  <p className="text-black font-Inter font-normal xs:text-[13px] sm:text-[13px] md:text-[15px] ml-[10px]">
-                    Completed 6 cycles of chemotherapy
-                  </p>
-                </div>
-              </div>
-              <div className="flex-row flex h-fit mb-[20px]">
-                <div className="bg-[#070707] border-[#ffd000] rounded-full border-[4px] w-[20px] h-[20px]" />
-                <div>
-                  <p className="text-black font-Inter font-normal xs:text-[13px] sm:text-[13px] md:text-[15px] ml-[10px]">
-                    Surgery to remove tumour
-                  </p>
-                </div>
-              </div>
-              <div className="flex-row flex h-fit mb-[20px]">
-                <div className="bg-white border-[#ffd000] rounded-full border-[4px] w-[20px] h-[20px]" />
-                <div>
-                  <p className="text-black font-Inter font-normal xs:text-[13px] sm:text-[13px] md:text-[15px] ml-[10px]">
-                    5 cycles of chemo + immunotherapy
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> */}
+          
           <div className="flex flex-col">
             <p className="text-black font-Inter font-bold xs:text-[15px] sm:text-[15px] md:text-[20px] self-start mb-[10px] capitalize">
               Funds Raised
@@ -411,10 +384,10 @@ export async function getStaticProps() {
   const HomeData:any = []
   try {
     // await the promise
-    // const querySnapshot = await getDocs(collection(db, 'ZMAX_DATA'))
-    // querySnapshot.forEach((doc) => {
-    //   HomeData.push(doc.data())
-    // })
+    const querySnapshot = await getDocs(collection(db, 'THADDYBEAR_DATA'))
+    querySnapshot.forEach((doc) => {
+      HomeData.push(doc.data())
+    })
   } catch (error) {
     console.log('Error Occured while fetching the Data', error)
   }
